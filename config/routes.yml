@@ -1,0 +1,25 @@
+lkstockemailalerts_alerts_index:
+  path: /lk-interactive/lkstockemailalerts
+  methods: [ GET ]
+  defaults:
+    _controller: 'LkInteractive\Back\LkStockEmailAlerts\Controller\AdminAlertsController::indexAction'
+    _legacy_controller: 'AdminAlertsControllerLegacyClass'
+    _legacy_link: 'AdminAlertsControllerLegacyClass'
+
+lkstockemailalerts_alerts_search:
+  path: /lk-interactive/lkstockemailalerts
+  methods: [ POST ]
+  defaults:
+    _controller: 'LkInteractive\Back\LkStockEmailAlerts\Controller\AdminAlertsController::searchAction'
+    _legacy_controller: 'AdminAlertsControllerLegacyClass'
+    _legacy_link: 'AdminAlertsControllerLegacyClass'
+
+lkstockemailalerts_alerts_detail:
+  path: /lk-interactive/lkstockemailalerts/{productId}/detail
+  methods: [ GET, POST ]
+  defaults:
+    _controller: 'LkInteractive\Back\LkStockEmailAlerts\Controller\AdminAlertsController::detailAction'
+    _legacy_controller: 'AdminAlertsControllerLegacyClass'
+    _legacy_link: 'AdminAlertsControllerLegacyClass'
+  requirements:
+    productId: \d+
